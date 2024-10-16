@@ -16,7 +16,10 @@ public class Main {
             System.out.println("1. Nuevo Registro");
             System.out.println("2. Busqueda por Codigo");
             System.out.println("3. Busqueda por Nombre");
-            System.out.println("4. Salir");
+            System.out.println("4. Mostrar Codigo de los productos registrados");
+            System.out.println("5. Mostrar Nombre de los productos registrados");
+            System.out.println("6. Eliminar producto");
+            System.out.println("7. Salir");
             opc = teclado.nextInt();
 
             switch (opc) {
@@ -47,6 +50,22 @@ public class Main {
                     break;
 
                 case 4:
+                    tienda.codigosRegistrados();
+                    break;
+
+                case 5:
+                    tienda.nombresRegistrados();
+                    break;
+
+                case 6:
+
+                    System.out.println("\nEliminacion de producto\n");
+                    System.out.println("Ingrese el codigo del producto a borrar");
+                    elmrpdto = teclado.nextInt();
+                    tienda.eliminarProducto(elmrpdto);
+                    break;
+
+                case 7:
                     System.out.println("¡Hasta luego!");
                     break;
 
@@ -54,6 +73,6 @@ public class Main {
                     System.out.println("Opción inválida.");
             }
         }
-        while (opc != 4);
+        while (opc != 7);
     }
     }
