@@ -25,4 +25,18 @@ public class Tienda {
         }
     }
 
+    public void codigosRegistrados() {
+        System.out.println("\nCodigo de productos registrados\n");
+        System.out.println(productos.keySet());
+    }
+
+    public void nombresRegistrados() {
+        System.out.println("\nNombre de productos registrados\n");
+        System.out.println(productos.values());
+    }
+
+    public void eliminarProducto(int elmrpdto) {
+        productos.remove(elmrpdto);
+    }
+
 }
